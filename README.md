@@ -13,3 +13,14 @@ Discover other GitHub user profiles and their repos, share them with others by t
 2. Open project
 3. Run and Build project into simulator
     a. should work and run out of the box
+
+
+## Authors
+
+##### Name: Keon Pourboghrat
+##### Email: keonpourboghrat@gmail.com
+
+## Other Projects
+
+##### Clipy ######(Chrome Extension): 
+<a href="https://chrome.google.com/webstore/detail/clipy/phgclneccgfonapjljmjdjdlfdmdhope">Chrome Store Page</a>
