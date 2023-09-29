@@ -18,6 +18,8 @@
 		D69604482AC70EC00004E1AC /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69604472AC70EC00004E1AC /* Repo.swift */; };
 		D696044A2AC70EDD0004E1AC /* GetRepos.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69604492AC70EDD0004E1AC /* GetRepos.swift */; };
 		D696044C2AC70F000004E1AC /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696044B2AC70F000004E1AC /* RepoCell.swift */; };
+		D696044E2AC70F540004E1AC /* RepoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696044D2AC70F540004E1AC /* RepoView.swift */; };
+		D69604502AC70F8D0004E1AC /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696044F2AC70F8D0004E1AC /* ShareView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		D69604472AC70EC00004E1AC /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		D69604492AC70EDD0004E1AC /* GetRepos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRepos.swift; sourceTree = "<group>"; };
 		D696044B2AC70F000004E1AC /* RepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
+		D696044D2AC70F540004E1AC /* RepoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoView.swift; sourceTree = "<group>"; };
+		D696044F2AC70F8D0004E1AC /* ShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,9 +71,11 @@
 			children = (
 				D696042F2AC70AA90004E1AC /* Git_In_My_HubApp.swift */,
 				D69604312AC70AA90004E1AC /* ContentView.swift */,
+				D696044F2AC70F8D0004E1AC /* ShareView.swift */,
 				D696044B2AC70F000004E1AC /* RepoCell.swift */,
 				D69604492AC70EDD0004E1AC /* GetRepos.swift */,
 				D69604472AC70EC00004E1AC /* Repo.swift */,
+				D696044D2AC70F540004E1AC /* RepoView.swift */,
 				D69604452AC70E3D0004E1AC /* UserView.swift */,
 				D69604412AC70DAF0004E1AC /* GetUser.swift */,
 				D69604432AC70E0E0004E1AC /* UserCell.swift */,
@@ -160,8 +166,10 @@
 			files = (
 				D69604482AC70EC00004E1AC /* Repo.swift in Sources */,
 				D69604322AC70AA90004E1AC /* ContentView.swift in Sources */,
+				D69604502AC70F8D0004E1AC /* ShareView.swift in Sources */,
 				D696044A2AC70EDD0004E1AC /* GetRepos.swift in Sources */,
 				D69604462AC70E3D0004E1AC /* UserView.swift in Sources */,
+				D696044E2AC70F540004E1AC /* RepoView.swift in Sources */,
 				D69604302AC70AA90004E1AC /* Git_In_My_HubApp.swift in Sources */,
 				D696044C2AC70F000004E1AC /* RepoCell.swift in Sources */,
 				D696043E2AC70D630004E1AC /* User.swift in Sources */,
