@@ -1,5 +1,8 @@
 # Git-In-My-Hub
+
+## Description
 An iOS app that uses the Open GitHub API to pull user account data into view for the user.
+Discover other GitHub user profiles and their repos, share them with others by tapping the share button.
 
 ## Screenshots
 
