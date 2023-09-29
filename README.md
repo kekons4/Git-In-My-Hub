@@ -8,6 +8,10 @@ Discover other GitHub user profiles and their repos, share them with others by t
 
 <img src="homeview.png" width="200" style="padding: 10"/> <img src="userview.png" width="200" style="padding: 10"/> <img src="userviewtwo.png" width="200" style="padding: 10"/> <img src="repoview.png" width="200" style="padding: 10"/> <img src="searchview.png" width="200" style="padding: 10"/>
 
+## Libraries
+1. Swift
+2. SwiftUI
+
 ## Installation
 1. Clone or Fork the project into XCode
 2. Open project
