@@ -3,4 +3,4 @@ An iOS app that uses the Open GitHub API to pull user account data into view for
 
 ## Screenshots
 
-![<img src="homeview.png" width="50" height="25"/>](homeview.png)
+![<img src="homeview.png" width="50"/>](homeview.png)
