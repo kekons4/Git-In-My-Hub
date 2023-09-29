@@ -15,6 +15,11 @@ struct UserView: View {
     @State var followers: [GithubUser]?
     @State var following: [GithubUser]?
     
+    // Internal State for
+    @State private var isLoading = false
+    @State private var isError = false
+    @State private var errorMsg = ""
+    
     var body: some View {
         
         ScrollView {
@@ -26,7 +31,15 @@ struct UserView: View {
                         .clipShape(Circle())
                 } placeholder: {
                     Circle()
+                        .trim(from: 0, to: 0.7)
+                        .stroke(Color.purple, lineWidth: 5)
+                        .frame(width: 100, height: 100)
+                        .rotationEffect(Angle(degrees: isLoading ? 360 : 0))
                         .foregroundColor(.secondary)
+                        .animation(Animation.default.repeatForever(autoreverses: false))
+                        .onAppear() {
+                            self.isLoading = true
+                        }
                 }
                 .frame(width: 120, height: 120)
                 
@@ -56,6 +69,7 @@ struct UserView: View {
                         ForEach(repos ?? [], id: \.name) { repo in
                             NavigationLink(value: repo) {
                                 RepoCell(repo: repo)
+                                    .frame(width: 100, height: 100)
                             }
                             .navigationDestination(for: Repo.self) { Repo in
                                 RepoView(fullName: Repo.fullName)
@@ -70,13 +84,24 @@ struct UserView: View {
                         repos = try await getRepos(reposUrl: user?.reposUrl ?? "https://api.github.com/users/\(username)/repos")
                     } catch GHError.invalidURL {
                         print("invalid URL")
+                        self.isError = true
+                        self.errorMsg = "Invalid URL, please try again."
                     } catch GHError.invalidData {
                         print("invalid data")
+                        self.isError = true
+                        self.errorMsg = "Invalid Data submitted, please try again."
                     } catch GHError.invalidResponse {
                         print("invalid response")
+                        self.isError = true
+                        self.errorMsg = "Invalid Response from GitHub, please try again later."
                     } catch {
                         print("Unknown error occurred")
+                        self.isError = true
+                        self.errorMsg = "Unknown Error occured, please try again later."
                     }
+                }
+                .alert(self.errorMsg, isPresented: $isError) {
+                    Button("OK", role: .cancel) {}
                 }
                 
                 List {

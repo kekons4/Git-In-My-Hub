@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @Environment (\.colorScheme) var colorScheme
+    
     // Stores user search input
     @State private var input: String = ""
     // Stores an array of randomly searched users on github
@@ -19,6 +21,10 @@ struct ContentView: View {
     @State private var searchState: Bool = false
     // Controls whether the Section text shows "the no user found message"
     @State private var searchResultsText: String = ""
+    // If an API error occured set the Error message
+    @State private var errorMsg = ""
+    // Bool var to control if error occured
+    @State private var isError = false
     
     var body: some View {
         
@@ -27,7 +33,7 @@ struct ContentView: View {
                 Section(listState) {
                     if searchState {
                         Text(searchResultsText)
-                            .foregroundColor(.black)
+                            .foregroundColor(colorScheme == .dark ? .white : .black)
                             .padding()
                     }
                     
@@ -59,12 +65,20 @@ struct ContentView: View {
                     }
                 } catch GHError.invalidURL {
                     print("invalid URL")
+                    self.isError = true
+                    self.errorMsg = "Invalid URL provided, please try again later."
                 } catch GHError.invalidData {
                     print("invalid data")
+                    self.isError = true
+                    self.errorMsg = "Invalid Data provided, please try again later."
                 } catch GHError.invalidResponse {
                     print("invalid response")
+                    self.isError = true
+                    self.errorMsg = "Invalid Response from GitHub, please try again later."
                 } catch {
                     print("Unknown error occurred")
+                    self.isError = true
+                    self.errorMsg = "Unknown Error occured, please try again later."
                 }
             }
             .searchable(text: $input, prompt: "Search Username")
@@ -79,20 +93,30 @@ struct ContentView: View {
                         searchResultsText = ""
                     } catch GHError.invalidURL {
                         print("invalid URL")
+                        self.isError = true
+                        self.errorMsg = "Invalid URL provided, please try again later."
                     } catch GHError.invalidData {
                         print("invalid data")
+                        self.isError = true
+                        self.errorMsg = "Invalid URL provided, please try again later."
                     } catch GHError.invalidResponse {
                         print("invalid response")
                         users = []
                         searchState = true
                         searchResultsText = "No Results Found for \(input)"
+                        self.isError = true
+                        self.errorMsg = "Invalid Response from GitHub, please try again later."
                     } catch {
                         print("Unknown error occurred")
+                        self.isError = true
+                        self.errorMsg = "Unknown Error occured, please try again later."
                     }
                 }
             }
             .refreshable() {
                 do {
+                    self.searchState = false
+                    
                     if !input.isEmpty {
                         listState = "Result"
                         let oneUser = try await getUser(username: input)
@@ -104,13 +128,24 @@ struct ContentView: View {
                     }
                 } catch GHError.invalidURL {
                     print("invalid URL")
+                    self.isError = true
+                    self.errorMsg = "Invalid URL provided, please try again later."
                 } catch GHError.invalidData {
                     print("invalid data")
+                    self.isError = true
+                    self.errorMsg = "Invalid Data provided, please try again later."
                 } catch GHError.invalidResponse {
                     print("invalid response")
+                    self.isError = true
+                    self.errorMsg = "Invalid Response from GitHub, please try again later."
                 } catch {
                     print("Unknown error occurred")
+                    self.isError = true
+                    self.errorMsg = "Unknown Error occured, please try again later."
                 }
+            }
+            .alert(self.errorMsg, isPresented: $isError) {
+                Button("OK", role: .cancel) {}
             }
         }
     }
