@@ -1,6 +1,6 @@
 # Git-In-My-Hub
 
-<img src="./assets/git-in-my-hub.png" width="256" height="256">
+<img src="./assets/Git-In-My-Hub.png" width="256" height="256">
 
 ## Description
 An iOS app that uses the Open GitHub API to pull user account data into view for the user.
