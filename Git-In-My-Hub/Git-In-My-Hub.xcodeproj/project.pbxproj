@@ -11,6 +11,8 @@
 		D69604322AC70AA90004E1AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69604312AC70AA90004E1AC /* ContentView.swift */; };
 		D69604342AC70AAA0004E1AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D69604332AC70AAA0004E1AC /* Assets.xcassets */; };
 		D69604372AC70AAA0004E1AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D69604362AC70AAA0004E1AC /* Preview Assets.xcassets */; };
+		D696043E2AC70D630004E1AC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696043D2AC70D630004E1AC /* User.swift */; };
+		D69604422AC70DAF0004E1AC /* GetUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69604412AC70DAF0004E1AC /* GetUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		D69604312AC70AA90004E1AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D69604332AC70AAA0004E1AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D69604362AC70AAA0004E1AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D696043D2AC70D630004E1AC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D69604412AC70DAF0004E1AC /* GetUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				D696042F2AC70AA90004E1AC /* Git_In_My_HubApp.swift */,
 				D69604312AC70AA90004E1AC /* ContentView.swift */,
+				D69604412AC70DAF0004E1AC /* GetUser.swift */,
+				D696043D2AC70D630004E1AC /* User.swift */,
 				D69604332AC70AAA0004E1AC /* Assets.xcassets */,
 				D69604352AC70AAA0004E1AC /* Preview Content */,
 			);
@@ -139,6 +145,8 @@
 			files = (
 				D69604322AC70AA90004E1AC /* ContentView.swift in Sources */,
 				D69604302AC70AA90004E1AC /* Git_In_My_HubApp.swift in Sources */,
+				D696043E2AC70D630004E1AC /* User.swift in Sources */,
+				D69604422AC70DAF0004E1AC /* GetUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +278,7 @@
 				DEVELOPMENT_TEAM = 38TKU655L8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Git In My Hub";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +308,7 @@
 				DEVELOPMENT_TEAM = 38TKU655L8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Git In My Hub";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
