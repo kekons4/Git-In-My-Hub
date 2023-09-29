@@ -66,13 +66,16 @@ struct UserView: View {
                 
                 List {
                     Section("Repositories") {
-                        ForEach(repos ?? [], id: \.name) { repo in
-                            NavigationLink(value: repo) {
-                                RepoCell(repo: repo)
-                                    .frame(width: 100, height: 100)
-                            }
-                            .navigationDestination(for: Repo.self) { Repo in
-                                RepoView(fullName: Repo.fullName)
+                        if repos?.count == 0 {
+                            Text("User has no Repositories")
+                        } else {
+                            ForEach(repos ?? [], id: \.name) { repo in
+                                NavigationLink(value: repo) {
+                                    RepoCell(repo: repo)
+                                }
+                                .navigationDestination(for: Repo.self) { Repo in
+                                    RepoView(fullName: Repo.fullName)
+                                }
                             }
                         }
                     }
@@ -106,12 +109,16 @@ struct UserView: View {
                 
                 List {
                     Section("Followers") {
-                        ForEach(followers ?? [], id: \.login) { follower in
-                            NavigationLink(value: follower) {
-                                UserCell(user: follower)
-                            }
-                            .navigationDestination(for: GithubUser.self) { User in
-                                UserView(username: "\(username)/followers")
+                        if followers?.count == 0 {
+                            Text("User has no Followers")
+                        } else {
+                            ForEach(followers ?? [], id: \.login) { follower in
+                                NavigationLink(value: follower) {
+                                    UserCell(user: follower)
+                                }
+                                .navigationDestination(for: GithubUser.self) { User in
+                                    UserView(username: "\(username)/followers")
+                                }
                             }
                         }
                     }
@@ -134,12 +141,16 @@ struct UserView: View {
                 
                 List {
                     Section("Following") {
-                        ForEach(following ?? [], id: \.login) { follow in
-                            NavigationLink(value: follow) {
-                                UserCell(user: follow)
-                            }
-                            .navigationDestination(for: GithubUser.self) { User in
-                                UserView(username: "\(username)/following")
+                        if following?.count == 0 {
+                            Text("User is not Following anyone")
+                        } else {
+                            ForEach(following ?? [], id: \.login) { follow in
+                                NavigationLink(value: follow) {
+                                    UserCell(user: follow)
+                                }
+                                .navigationDestination(for: GithubUser.self) { User in
+                                    UserView(username: "\(username)/following")
+                                }
                             }
                         }
                     }
