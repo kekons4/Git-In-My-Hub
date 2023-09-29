@@ -13,6 +13,8 @@
 		D69604372AC70AAA0004E1AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D69604362AC70AAA0004E1AC /* Preview Assets.xcassets */; };
 		D696043E2AC70D630004E1AC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D696043D2AC70D630004E1AC /* User.swift */; };
 		D69604422AC70DAF0004E1AC /* GetUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69604412AC70DAF0004E1AC /* GetUser.swift */; };
+		D69604442AC70E0E0004E1AC /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69604432AC70E0E0004E1AC /* UserCell.swift */; };
+		D69604462AC70E3D0004E1AC /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69604452AC70E3D0004E1AC /* UserView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		D69604362AC70AAA0004E1AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D696043D2AC70D630004E1AC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D69604412AC70DAF0004E1AC /* GetUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUser.swift; sourceTree = "<group>"; };
+		D69604432AC70E0E0004E1AC /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		D69604452AC70E3D0004E1AC /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +61,9 @@
 			children = (
 				D696042F2AC70AA90004E1AC /* Git_In_My_HubApp.swift */,
 				D69604312AC70AA90004E1AC /* ContentView.swift */,
+				D69604452AC70E3D0004E1AC /* UserView.swift */,
 				D69604412AC70DAF0004E1AC /* GetUser.swift */,
+				D69604432AC70E0E0004E1AC /* UserCell.swift */,
 				D696043D2AC70D630004E1AC /* User.swift */,
 				D69604332AC70AAA0004E1AC /* Assets.xcassets */,
 				D69604352AC70AAA0004E1AC /* Preview Content */,
@@ -144,8 +150,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D69604322AC70AA90004E1AC /* ContentView.swift in Sources */,
+				D69604462AC70E3D0004E1AC /* UserView.swift in Sources */,
 				D69604302AC70AA90004E1AC /* Git_In_My_HubApp.swift in Sources */,
 				D696043E2AC70D630004E1AC /* User.swift in Sources */,
+				D69604442AC70E0E0004E1AC /* UserCell.swift in Sources */,
 				D69604422AC70DAF0004E1AC /* GetUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
