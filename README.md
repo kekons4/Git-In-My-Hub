@@ -3,4 +3,4 @@ An iOS app that uses the Open GitHub API to pull user account data into view for
 
 ## Screenshots
 
-<img src="homeview.png" width="200"/> <img src="userview.png" width="200"/> <img src="userviewtwo.png" width="200"/> <img src="repoview.png" width="200"/> <img src="searchview.png" width="200"/>
+<img src="homeview.png" width="200" style="margin: 10"/> <img src="userview.png" width="200" style="margin: 10"/> <img src="userviewtwo.png" width="200" style="margin: 10"/> <img src="repoview.png" width="200" style="margin: 10"/> <img src="searchview.png" width="200" style="margin: 10"/>
